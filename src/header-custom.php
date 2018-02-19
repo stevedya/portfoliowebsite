@@ -22,12 +22,12 @@ $custom_logo_id = get_theme_mods();
 $image = wp_get_attachment_image_src($custom_logo_id['custom_logo'], 'full');
 ?>
 <header>
-    <div class="ml-auto">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                aria-label="Toggle navigation">
-            <i class="fas fa-bars"></i></span>
-        </button>
-    </div>
+<!--    <div class="ml-auto">-->
+<!--        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"-->
+<!--                aria-label="Toggle navigation">-->
+<!--            <i class="fas fa-bars"></i></span>-->
+<!--        </button>-->
+<!--    </div>-->
     <nav class="navbar navbar-expand-md" role="navigation">
         <!--        <a class="navbar-brand" href="--><?php //echo home_url(); ?><!--">--><?php //bloginfo('name'); ?><!--</a>-->
 
@@ -47,3 +47,6 @@ $image = wp_get_attachment_image_src($custom_logo_id['custom_logo'], 'full');
         ?>
     </nav>
 </header>
+<div class="mobile-navbar">
+    <?php wp_nav_menu(array('theme_location' => 'mobile', 'menu_class' => 'd-flex justify-content-around')); ?>
+</div>

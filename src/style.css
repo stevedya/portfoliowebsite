@@ -327,11 +327,13 @@ h4 {
   font-size: 1.414em; }
 
 body {
-  font-family: 'Poppins', sans-serif; }
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 50px; }
 
 ul {
   padding-left: 0;
-  list-style-type: none; }
+  list-style-type: none;
+  margin-bottom: 0; }
 
 .btn {
   border-radius: 60px; }
@@ -344,11 +346,15 @@ ul {
     border-color: #131313; }
 
 .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
-  background: #eaeaea;
-  border-color: #eaeaea; }
+  background: #131313;
+  border-color: #131313;
+  box-shadow: none; }
+
+.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: none; }
 
 .btn-primary.focus, .btn-primary:focus {
-  box-shadow: 0 0 0 0.2rem #3c3c3c; }
+  box-shadow: none; }
 
 .thick-hr {
   margin-top: 3rem;
@@ -361,6 +367,7 @@ ul {
   background: transparent; }
 
 .navbar {
+  display: none;
   background: rgba(76, 76, 76, 0);
   text-transform: uppercase; }
 
@@ -370,6 +377,26 @@ ul {
     color: #00acad; }
   .navbar a:hover {
     color: #131313; }
+
+.mobile-navbar {
+  z-index: 1;
+  overflow: hidden;
+  background-color: #131313;
+  position: fixed;
+  bottom: 0;
+  width: 100%; }
+
+.mobile-navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px; }
+
+.menu-mobile .menu-item {
+  margin-right: 20px; }
 
 .description {
   font-weight: 900;
@@ -382,10 +409,47 @@ ul {
 .about-content {
   font-size: 1.125em; }
 
+.grid-item {
+  float: left;
+  width: 50%; }
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.detail-container {
+  display: table;
+  table-layout: fixed; }
+
+.detail-label {
+  min-width: 108px;
+  display: table-cell;
+  font-weight: 900; }
+
+.detail-name {
+  display: table-cell; }
+
 footer {
   background: #131313;
   color: #eaeaea; }
 
-@media screen and (min-width: 968px) {
+@media screen and (min-width: 992px) {
   .jumbotron .container {
-    padding-bottom: 100px; } }
+    padding-bottom: 100px; }
+  .grid-item {
+    float: left;
+    width: 33.333333%; } }
+
+@media screen and (min-width: 768px) {
+  body {
+    margin-bottom: 0; }
+  .mobile-navbar {
+    display: none; }
+  .navbar {
+    display: block; } }
+
+@media screen and (max-width: 768px) {
+  .isotope-buttons {
+    width: 40%; } }

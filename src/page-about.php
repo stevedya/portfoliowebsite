@@ -9,6 +9,7 @@
                             <?php the_post(); ?>
                             <div class="col-12 py-md-5">
                                 <h1><?php the_title(); ?></h1>
+                                <hr>
                             </div>
                             <div class="col-md-4">
                                 <div class="text-center">

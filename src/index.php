@@ -5,9 +5,9 @@
             <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : ?>
                     <?php the_post(); ?>
-                    <div class="col-12 py-md-5 text-center">
+                    <div class="col-12 py-md-5">
                         <h1><?php the_title(); ?></h1>
-                        <hr class="thick-hr">
+                        <hr>
                     </div>
                     <div class="col-md-4">
                         <div class="text-center">
