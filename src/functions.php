@@ -37,7 +37,8 @@ function load_theme_styles()
     //fonts
     wp_enqueue_style('google_fonts', "https://fonts.googleapis.com/css?family=Poppins");
     // Font awesome
-    wp_enqueue_style('font-awesome', 'https://use.fontawesome.com/releases/v5.0.6/css/all.css');
+    wp_enqueue_style('font-awesome', 'https://use.fontawesome.com/releases/v5.0.6/js/all.js');
+    //wp_enqueue_style('font-awesome', 'https://use.fontawesome.com/releases/v5.0.6/css/all.css');
     //bootstrap
     wp_enqueue_style('boostrap_framework', get_template_directory_uri() . "/css/bootstrap.min.css");
     //main style
@@ -51,21 +52,21 @@ add_action("wp_enqueue_scripts", "load_theme_styles");
    ========================================================================== */
 function load_js_scripts()
 {
-    wp_deregister_script('jquery');
+    wp_deregister_script('jQuery');
     //jquery
-    wp_enqueue_script('jquery', get_template_directory_uri() . '/js/jquery-3.3.1.min.js', array(), null, true);
+    wp_enqueue_script('jQuery', get_template_directory_uri() . '/js/jquery-3.3.1.min.js', array(), null, true);
     //modernizr
     wp_enqueue_script("modernizr", "https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js");
     //Popper required for bootstrap
-    wp_enqueue_script("popper", "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js", array( 'jquery'),1,true);
+    wp_enqueue_script("popper", "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js", array( 'jQuery'),1,true);
     //Bootstrap Js
-    wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array( 'jquery' ),1,true);
+    wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array( 'jQuery' ),1,true);
     //Font Awesome
-    //wp_enqueue_script('font-awesome', 'https://use.fontawesome.com/releases/v5.0.6/js/all.js', array( 'jquery'),1 ,true);
+
     //isotope for image sorting
-    wp_enqueue_script('isotope', get_template_directory_uri() . '/js/isotope.pkgd.min.js', array('jquery'), 1, true);
+    wp_enqueue_script('isotope', get_template_directory_uri() . '/js/isotope.pkgd.min.js', array('jQuery'), 1, true);
     //main js
-    wp_enqueue_script('main-js', get_template_directory_uri() .  '/js/main.js', array('jquery'),1 ,true);
+    wp_enqueue_script('main-js', get_template_directory_uri() .  '/js/main.js', array('jQuery'),1 ,true);
 }
 
 add_action("wp_enqueue_scripts", "load_js_scripts");
@@ -97,6 +98,18 @@ function theme_widget_setup() {
             'after_widget'  => "</div>\n",
             'before_title'  => '<h4 class="link-sidebar">',
             'after_title'   => "</h4><hr>\n",
+        )
+    );
+    register_sidebar(
+        array(
+            'name'  => 'Footer Social Media',
+            'id'    => 'social-media',
+            'class' => 'social-media',
+            'description' => 'Footer Social Media',
+            'before_widget' => '<div id="%1$s" class="sidebar-link widget %2$s">',
+            'after_widget'  => "</div>\n",
+            'before_title'  => '<h4 class="link-sidebar">',
+            'after_title'   => "</h4>\n",
         )
     );
 }

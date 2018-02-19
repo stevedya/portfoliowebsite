@@ -305,6 +305,46 @@ template {
 [hidden] {
   display: none; }
 
+.btn {
+  border-radius: 60px; }
+
+.btn-primary {
+  background: #00acad;
+  border-color: #00acad; }
+  .btn-primary:hover {
+    background: #131313;
+    border-color: #131313; }
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+  background: #131313;
+  border-color: #131313;
+  box-shadow: none; }
+
+.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: none; }
+
+.btn-primary.focus, .btn-primary:focus {
+  box-shadow: none; }
+
+.btn-dark {
+  background: #131313;
+  border-color: #131313;
+  color: #f1f1f1; }
+  .btn-dark:hover {
+    background: #00acad;
+    border-color: #00acad; }
+
+.btn-dark:not(:disabled):not(.disabled).active, .btn-dark:not(:disabled):not(.disabled):active, .show > .btn-dark.dropdown-toggle {
+  background: #131313;
+  border-color: #131313;
+  box-shadow: none; }
+
+.btn-dark:not(:disabled):not(.disabled).active:focus, .btn-dark:not(:disabled):not(.disabled):active:focus, .show > .btn-dark.dropdown-toggle:focus {
+  box-shadow: none; }
+
+.btn-dark.focus, .btn-dark:focus {
+  box-shadow: none; }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
   font-weight: 900;
@@ -334,27 +374,6 @@ ul {
   padding-left: 0;
   list-style-type: none;
   margin-bottom: 0; }
-
-.btn {
-  border-radius: 60px; }
-
-.btn-primary {
-  background: #00acad;
-  border-color: #00acad; }
-  .btn-primary:hover {
-    background: #131313;
-    border-color: #131313; }
-
-.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
-  background: #131313;
-  border-color: #131313;
-  box-shadow: none; }
-
-.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show > .btn-primary.dropdown-toggle:focus {
-  box-shadow: none; }
-
-.btn-primary.focus, .btn-primary:focus {
-  box-shadow: none; }
 
 .thick-hr {
   margin-top: 3rem;
@@ -404,10 +423,16 @@ ul {
   font-size: 0.875em; }
 
 .link-area {
-  background: #eaeaea; }
+  color: #f1f1f1;
+  background: #008484; }
 
 .about-content {
   font-size: 1.125em; }
+
+.about-sidebar {
+  box-shadow: 3px 3px 10px 0px rgba(12, 12, 12, 0.55);
+  background: #eaeaea;
+  border: 5px dashed rgba(187, 187, 187, 0.341176); }
 
 .grid-item {
   float: left;
@@ -430,6 +455,10 @@ ul {
 
 .detail-name {
   display: table-cell; }
+
+.social-media {
+  color: #f1f1f1;
+  background: #212121; }
 
 footer {
   background: #131313;

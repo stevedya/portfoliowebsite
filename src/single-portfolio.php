@@ -3,7 +3,6 @@
 <section class="mb-md-5 py-4 content-area">
     <div class="container">
         <div class="row">
-
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <div class="col-12">
                     <img src="<?php the_field('Thumbnail'); ?>" class="img-fluid" alt="">

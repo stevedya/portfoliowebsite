@@ -3,7 +3,7 @@
 <section class="mb-md-5 py-4 content-area">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-10">
+            <div class="col-12">
                 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <h1><?php the_title(); ?></h1>
                     <hr>

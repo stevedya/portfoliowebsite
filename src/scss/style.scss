@@ -1,6 +1,7 @@
 @import "meta";
 @import "variables";
 @import "normalize";
+@import "buttons";
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
@@ -37,33 +38,6 @@ ul {
   padding-left: 0;
   list-style-type: none;
   margin-bottom: 0;
-}
-
-.btn {
-  border-radius: 60px;
-}
-
-.btn-primary {
-  background: $main-color;
-  border-color: $main-color;
-  &:hover {
-    background: $dark-grey;
-    border-color: $dark-grey;
-  }
-}
-
-//btn focus and active state
-.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
-  background: $dark-grey;
-  border-color: $dark-grey;
-  box-shadow: none;
-}
-.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
-  box-shadow: none;
-}
-
-.btn-primary.focus, .btn-primary:focus {
-  box-shadow: none;
 }
 
 .thick-hr {
@@ -122,13 +96,25 @@ ul {
 }
 
 .link-area {
-  background: $light-grey;
+  color: $lightest-grey;
+  background: $main-dark;
 }
 
 .about-content {
   font-size: 1.125em;
 }
+.about-sidebar {
+  //DarkerStyles
+  //color: $light-grey;
+  //background: $dark-grey;
+  //border: 4px dashed rgba(255, 255, 255, 0.84);
+  box-shadow: 3px 3px 10px 0px rgba(12, 12, 12, 0.55);
+  //Lighter styles
+  background: $light-grey;
+  border: 5px dashed rgba(187, 187, 187, 0.3411764705882353);
+}
 
+// For Isotope portoflio page
 .grid-item {
   float: left;
   width: 50%;
@@ -150,10 +136,15 @@ ul {
   display: table-cell;
   font-weight: 900;
 }
-
 .detail-name {
   display: table-cell;
 }
+
+.social-media {
+  color: $lightest-grey;
+  background: $medium-dark-grey;
+}
+
 footer {
   background: $dark-grey;
   color: #eaeaea;

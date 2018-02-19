@@ -1,0 +1,50 @@
+.btn {
+  border-radius: 60px;
+}
+
+.btn-primary {
+  background: $main-color;
+  border-color: $main-color;
+  &:hover {
+    background: $dark-grey;
+    border-color: $dark-grey;
+  }
+}
+
+//btn focus and active state
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+  background: $dark-grey;
+  border-color: $dark-grey;
+  box-shadow: none;
+}
+.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+.btn-primary.focus, .btn-primary:focus {
+  box-shadow: none;
+}
+
+.btn-dark {
+  background: $dark-grey;
+  border-color: $dark-grey;
+  color: $lightest-grey;
+  &:hover {
+    background: $main-color;
+    border-color: $main-color;
+  }
+}
+
+//btn focus and active state
+.btn-dark:not(:disabled):not(.disabled).active, .btn-dark:not(:disabled):not(.disabled):active, .show > .btn-dark.dropdown-toggle {
+  background: $dark-grey;
+  border-color: $dark-grey;
+  box-shadow: none;
+}
+.btn-dark:not(:disabled):not(.disabled).active:focus, .btn-dark:not(:disabled):not(.disabled):active:focus, .show>.btn-dark.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+.btn-dark.focus, .btn-dark:focus {
+  box-shadow: none;
+}

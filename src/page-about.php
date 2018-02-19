@@ -2,7 +2,7 @@
 <section class="mb-md-5 py-4 content-area">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-10">
+            <div class="col-12">
                 <div class="row">
                     <?php if (have_posts()) : ?>
                         <?php while (have_posts()) : ?>
@@ -11,7 +11,7 @@
                                 <h1><?php the_title(); ?></h1>
                                 <hr>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4 about-sidebar p-md-4">
                                 <div class="text-center">
                                     <?php
                                     if (has_post_thumbnail()) {
@@ -24,7 +24,7 @@
                                     <?php if (dynamic_sidebar('sidebar-1')) : endif; ?>
                                 </div>
                             </div>
-                            <div class="col-md-8 about-content">
+                            <div class="col-md-8 about-content px-md-4">
                                 <p class="pt-2"><?php the_content(); ?></p>
                             </div>
                             <!-- Post thumbnail -->
