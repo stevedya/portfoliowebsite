@@ -15,4 +15,23 @@ $(document).ready(function () {
             filter: filterValue
         });
     });
+
+    //overlay animation
+    $('.portfolio-card').on('mouseenter', function () {
+        console.log('mouse entered');
+        $(this).children('.portfolio-overlay').animate({
+            top: '0',
+            opacity: 0.9
+        }, 400);
+        $(this).children('img').addClass('enlarge-img');
+    });
+    //overlay animation
+    $('.portfolio-card').on('mouseleave', function () {
+        console.log('mouse left');
+        $(this).children('.portfolio-overlay').animate({
+            top: '300px',
+            opacity: 0
+        }, 400);
+        $(this).children('img').removeClass('enlarge-img');
+    });
 });

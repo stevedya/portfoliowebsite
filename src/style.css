@@ -444,6 +444,64 @@ ul {
   display: block;
   clear: both; }
 
+.portfolio-card {
+  position: relative;
+  overflow: hidden; }
+
+.grid-item {
+  color: #f1f1f1; }
+  .grid-item:visited {
+    color: #f1f1f1; }
+  .grid-item:hover {
+    color: #f1f1f1; }
+
+.overlay-active {
+  opacity: 0.9;
+  top: 0; }
+
+.portfolio-thumb {
+  -webkit-transition: -webkit-transform 0.4s ease;
+  -moz-transition: -moz-transform 0.4s ease;
+  -o-transition: -o-transform 0.4s ease;
+  transition: transform 0.4s ease; }
+
+.enlarge-img {
+  transform: scale(1.05); }
+
+.portfolio-overlay {
+  font-size: 0.875em;
+  opacity: 0;
+  background: #212121;
+  position: absolute;
+  top: 300px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding-left: 20px; }
+
+.overlay-detail-label {
+  min-width: 80px;
+  display: table-cell;
+  font-weight: 900;
+  border-right: 1px solid #f1f1f1; }
+
+.overlay-detail-name {
+  display: table-cell;
+  padding-left: 15px; }
+
+.overlay-link-label {
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 50px;
+  color: #00ddde;
+  font-weight: bold;
+  display: inline; }
+
 .detail-container {
   display: table;
   table-layout: fixed; }

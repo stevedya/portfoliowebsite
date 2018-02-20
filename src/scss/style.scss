@@ -67,6 +67,7 @@ ul {
     color: $dark-grey;
   }
 }
+
 .mobile-navbar {
   z-index: 1;
   overflow: hidden;
@@ -85,6 +86,7 @@ ul {
   text-decoration: none;
   font-size: 17px;
 }
+
 .menu-mobile .menu-item {
   margin-right: 20px;
 }
@@ -103,6 +105,7 @@ ul {
 .about-content {
   font-size: 1.125em;
 }
+
 .about-sidebar {
   //DarkerStyles
   //color: $light-grey;
@@ -119,6 +122,7 @@ ul {
   float: left;
   width: 50%;
 }
+
 /* clear fix */
 .grid:after {
   content: '';
@@ -126,16 +130,94 @@ ul {
   clear: both;
 }
 
+// PORTFOLIO OPTIONS
+.portfolio-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.grid-item {
+  color: $lightest-grey;
+  &:visited {
+    color: $lightest-grey;
+  }
+  &:hover {
+    color: $lightest-grey;
+  }
+}
+
+.overlay-active {
+  opacity: 0.9;
+  top: 0;
+}
+
+.portfolio-thumb {
+  -webkit-transition: -webkit-transform 0.4s ease;
+  -moz-transition: -moz-transform 0.4s ease;
+  -o-transition: -o-transform 0.4s ease;
+  transition: transform 0.4s ease;
+}
+
+.enlarge-img {
+  transform: scale(1.05);
+}
+
+.portfolio-overlay {
+  font-size: 0.875em;
+  opacity: 0;
+  background: $medium-dark-grey;
+  position: absolute;
+  top: 300px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  //-webkit-transition: opacity 0.2s ease-in-out;
+  //-moz-transition: opacity 0.2s ease-in-out;
+  //-o-transition: opacity 0.2s ease-in-out;
+  //transition: top 0.2s ease-in-out;
+  //flex box utilities
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding-left: 20px;
+}
+
+.overlay-detail-label {
+  min-width: 80px;
+  display: table-cell;
+  font-weight: 900;
+  border-right: 1px solid $lightest-grey;
+}
+
+.overlay-detail-name {
+  display: table-cell;
+  padding-left: 15px;
+}
+
+.overlay-link-label {
+  //background: rgba(255, 255, 255, 0.16862745098039217);
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 50px;
+  color: #00ddde;
+  font-weight: bold;
+  display: inline;
+}
+
 //single page
 .detail-container {
   display: table;
   table-layout: fixed;
 }
+
 .detail-label {
   min-width: 108px;
   display: table-cell;
   font-weight: 900;
 }
+
 .detail-name {
   display: table-cell;
 }
@@ -159,6 +241,7 @@ footer {
     width: 33.333333%;
   }
 }
+
 @media screen and (min-width: 768px) {
   body {
     margin-bottom: 0;
@@ -170,6 +253,7 @@ footer {
     display: block;
   }
 }
+
 //For the isotope buttons
 @media screen and (max-width: 768px) {
   .isotope-buttons {
