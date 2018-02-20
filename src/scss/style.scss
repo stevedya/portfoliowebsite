@@ -46,6 +46,9 @@ ul {
   margin-bottom: 2rem;
   border-top: 8px solid #131313;
 }
+.site-heading {
+  color: $dark-grey;
+}
 
 .jumbotron {
   height: 100vh;
@@ -116,6 +119,7 @@ ul {
 .grid-item {
   float: left;
   width: 50%;
+  padding: 0.5em;
 }
 
 /* clear fix */

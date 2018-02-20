@@ -4,6 +4,10 @@ $(document).ready(function () {
         // options
         itemSelector: '.grid-item',
     });
+    // layout Isotope after each image loads
+    $grid.imagesLoaded().progress( function() {
+        $grid.isotope('layout');
+    });
     // filter items on button click
     $('.filter-button-group').on( 'click', 'button', function() {
         //add the data-filter attr

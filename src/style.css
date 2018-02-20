@@ -447,6 +447,9 @@ ul {
   margin-bottom: 2rem;
   border-top: 8px solid #131313; }
 
+.site-heading {
+  color: #131313; }
+
 .jumbotron {
   height: 100vh;
   margin-bottom: 0;
@@ -502,7 +505,8 @@ ul {
 
 .grid-item {
   float: left;
-  width: 50%; }
+  width: 50%;
+  padding: 0.5em; }
 
 /* clear fix */
 .grid:after {

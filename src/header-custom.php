@@ -28,6 +28,14 @@ $image = wp_get_attachment_image_src($custom_logo_id['custom_logo'], 'full');
 <!--            <i class="fas fa-bars"></i></span>-->
 <!--        </button>-->
 <!--    </div>-->
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center py-4">
+                <h1 class="site-heading"><?php bloginfo('title'); ?></h1>
+            </div>
+        </div>
+    </div>
+
     <nav class="navbar navbar-expand-md" role="navigation">
         <!--        <a class="navbar-brand" href="--><?php //echo home_url(); ?><!--">--><?php //bloginfo('name'); ?><!--</a>-->
 

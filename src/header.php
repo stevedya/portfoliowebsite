@@ -39,6 +39,7 @@
 $custom_logo_id = get_theme_mods();
 $image = wp_get_attachment_image_src($custom_logo_id['custom_logo'], 'full');
 ?>
+
 <header class="header-bg">
     <nav class="navbar navbar-expand-md" role="navigation">
 <!--        <a class="navbar-brand" href="--><?php //echo home_url(); ?><!--">--><?php //bloginfo('name'); ?><!--</a>-->

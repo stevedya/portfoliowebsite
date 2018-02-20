@@ -63,8 +63,8 @@ function load_js_scripts()
     wp_enqueue_script("popper", "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js", array( 'jQuery'),1,true);
     //Bootstrap Js
     wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array( 'jQuery' ),1,true);
-    //Font Awesome
-
+    //imagesloaded plugin
+    wp_enqueue_script('imagesLoaded', get_template_directory_uri() . '/js/imagesloaded.pkgd.min.js', array('jQuery'), 1, true);
     //isotope for image sorting
     wp_enqueue_script('isotope', get_template_directory_uri() . '/js/isotope.pkgd.min.js', array('jQuery'), 1, true);
     //main js

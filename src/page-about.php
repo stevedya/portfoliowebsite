@@ -1,5 +1,5 @@
 <?php get_header('custom'); ?>
-<section class="mb-md-5 pb-4 content-area">
+<section class="mb-md-5 pb-4 pt-3 content-area">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12">
@@ -8,7 +8,7 @@
                         <?php while (have_posts()) : ?>
                             <?php the_post(); ?>
                             <div class="col-12 py-md-5">
-                                <h1><?php the_title(); ?></h1>
+                                <h2><?php the_title(); ?></h2>
                                 <hr>
                             </div>
                             <div class="col-md-4 about-sidebar pt-3 p-md-4">
