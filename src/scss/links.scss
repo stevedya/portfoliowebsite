@@ -1,0 +1,76 @@
+
+.hover-effect a:hover,
+.hover-effect a:focus {
+  outline: none;
+}
+
+.hover-effect a {
+  position: relative;
+  display: inline-block;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.hover-effect a::before,
+.hover-effect a::after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: $main-color;
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+
+.hover-effect a::before {
+  top: 0;
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+
+.hover-effect a::after {
+  bottom: 0;
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  transform: translateY(10px);
+}
+
+.hover-effect a:hover,
+.hover-effect a:focus {
+  color: $main-color;
+}
+
+.hover-effect a:hover::before,
+.hover-effect a:focus::before,
+.hover-effect a:hover::after,
+.hover-effect a:focus::after {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+//Active State
+.current-menu-item  a::before {
+  opacity: 1;
+  top: 0;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+.current-menu-item a::after {
+  opacity: 1;
+  bottom: 0;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  transform: translateY(0px);
+}

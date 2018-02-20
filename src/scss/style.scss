@@ -2,6 +2,7 @@
 @import "variables";
 @import "normalize";
 @import "buttons";
+@import "links";
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
@@ -12,21 +13,21 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 3.998em;
+  font-size: 2.625em; /*42px*/
   line-height: 1;
   letter-spacing: 1px;
 }
 
 h2 {
-  font-size: 2.827em;
+  font-size: 1.875em;
 }
 
 h3 {
-  font-size: 1.999em;
+  font-size: 1.5em;
 }
 
 h4 {
-  font-size: 1.414em;
+  font-size: 1.25em;
 }
 
 body {
@@ -69,7 +70,7 @@ ul {
 }
 
 .mobile-navbar {
-  z-index: 1;
+  z-index: 999;
   overflow: hidden;
   background-color: #131313;
   position: fixed;
@@ -107,14 +108,8 @@ ul {
 }
 
 .about-sidebar {
-  //DarkerStyles
-  //color: $light-grey;
-  //background: $dark-grey;
-  //border: 4px dashed rgba(255, 255, 255, 0.84);
-  box-shadow: 3px 3px 10px 0px rgba(12, 12, 12, 0.55);
-  //Lighter styles
   background: $light-grey;
-  border: 5px dashed rgba(187, 187, 187, 0.3411764705882353);
+  border: none;
 }
 
 // For Isotope portoflio page
@@ -163,6 +158,8 @@ ul {
 }
 
 .portfolio-overlay {
+  //display none for mobile
+  display: none;
   font-size: 0.875em;
   opacity: 0;
   background: $medium-dark-grey;
@@ -172,30 +169,22 @@ ul {
   left: 0;
   right: 0;
   z-index: 2;
-  //-webkit-transition: opacity 0.2s ease-in-out;
-  //-moz-transition: opacity 0.2s ease-in-out;
-  //-o-transition: opacity 0.2s ease-in-out;
-  //transition: top 0.2s ease-in-out;
   //flex box utilities
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
   padding-left: 20px;
 }
-
 .overlay-detail-label {
   min-width: 80px;
   display: table-cell;
   font-weight: 900;
   border-right: 1px solid $lightest-grey;
 }
-
 .overlay-detail-name {
   display: table-cell;
   padding-left: 15px;
 }
-
 .overlay-link-label {
   //background: rgba(255, 255, 255, 0.16862745098039217);
   text-align: center;
@@ -204,6 +193,16 @@ ul {
   color: #00ddde;
   font-weight: bold;
   display: inline;
+}
+.mobile-portfolio-overlay {
+  font-size: 0.75em;
+  text-align: center;
+  background: rgba(31, 31, 31, 0.45);
+  color: rgba(241, 241, 241, 0.45);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 //single page
@@ -232,6 +231,44 @@ footer {
   color: #eaeaea;
 }
 
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 3.998em;
+  }
+
+  h2 {
+    font-size: 2.827em;
+  }
+
+  h3 {
+    font-size: 1.999em;
+  }
+
+  h4 {
+    font-size: 1.414em;
+  }
+  body {
+    margin-bottom: 0;
+  }
+  .mobile-navbar {
+    display: none;
+  }
+  .navbar {
+    display: block;
+  }
+  .about-sidebar {
+    box-shadow: 3px 3px 10px 0px rgba(12, 12, 12, 0.55);
+    background: $light-grey;
+    border: 5px dashed rgba(187, 187, 187, 0.3411764705882353);
+  }
+  .portfolio-overlay {
+    display: flex;
+  }
+  .mobile-portfolio-overlay {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 992px) {
   .jumbotron .container {
     padding-bottom: 100px;
@@ -242,17 +279,6 @@ footer {
   }
 }
 
-@media screen and (min-width: 768px) {
-  body {
-    margin-bottom: 0;
-  }
-  .mobile-navbar {
-    display: none;
-  }
-  .navbar {
-    display: block;
-  }
-}
 
 //For the isotope buttons
 @media screen and (max-width: 768px) {

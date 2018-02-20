@@ -40,7 +40,7 @@ $image = wp_get_attachment_image_src($custom_logo_id['custom_logo'], 'full');
                 'container' => 'div',
                 'container_class' => 'collapse navbar-collapse justify-content-center',
                 'container_id' => 'navbarNavDropdown',
-                'menu_class' => 'navbar-nav',
+                'menu_class' => 'navbar-nav hover-effect',
                 'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
                 'walker' => new WP_Bootstrap_Navwalker())
         );

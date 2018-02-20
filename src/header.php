@@ -11,12 +11,23 @@
     <style>
         .header-bg {
             background: url("<?php echo get_theme_mod('header_background_image'); ?>");
-            background-size: 380px;
+            background-size: 350px;
             background-position: right -100px bottom;
             background-repeat: no-repeat;
         }
-        @media screen and (min-width: 968px) {
+        @media screen and (min-width: 768px) {
             .header-bg {
+                background-size: 600px;
+            }
+        }
+        @media screen and (min-width: 992px) {
+            .header-bg {
+                background-size: 700px;
+                background-position:  <?php echo get_theme_mod('header_background_position'); ?>;
+            }
+        }
+        @media screen and (min-width: 1200px) {
+            .header-bg{
                 background-size: <?php echo get_theme_mod('header_background_size'); ?>;
                 background-position:  <?php echo get_theme_mod('header_background_position'); ?>;
             }
@@ -46,7 +57,7 @@ $image = wp_get_attachment_image_src($custom_logo_id['custom_logo'], 'full');
                 'container' => 'div',
                 'container_class' => 'collapse navbar-collapse justify-content-center',
                 'container_id' => 'navbarNavDropdown',
-                'menu_class' => 'navbar-nav',
+                'menu_class' => 'navbar-nav hover-effect',
                 'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
                 'walker' => new WP_Bootstrap_Navwalker())
         );
@@ -70,3 +81,6 @@ $image = wp_get_attachment_image_src($custom_logo_id['custom_logo'], 'full');
         </div>
     </div>
 </header>
+<div class="mobile-navbar">
+    <?php wp_nav_menu(array('theme_location' => 'mobile', 'menu_class' => 'd-flex justify-content-around')); ?>
+</div>

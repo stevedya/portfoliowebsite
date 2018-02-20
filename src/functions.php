@@ -28,6 +28,8 @@ add_theme_support('custom-logo');
 add_theme_support('menus');
 //post thumbnails
 add_theme_support('post-thumbnails');
+//Custom Image Size
+add_image_size('portfolio-thumb', 200, 200, true);
 
 /* ==========================================================================
   Load Styles

@@ -1,5 +1,5 @@
 <?php get_header('custom'); ?>
-<section class="mb-md-5 py-4 content-area">
+<section class="mb-md-5 pb-4 content-area">
     <div class="container">
         <div class="row">
             <?php if (have_posts()) : ?>

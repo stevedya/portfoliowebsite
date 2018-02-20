@@ -1,5 +1,5 @@
 <?php get_header('custom'); ?>
-<section class="mb-md-5 py-4 content-area">
+<section class="mb-md-5 pb-4 content-area">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12">
@@ -11,7 +11,7 @@
                                 <h1><?php the_title(); ?></h1>
                                 <hr>
                             </div>
-                            <div class="col-md-4 about-sidebar p-md-4">
+                            <div class="col-md-4 about-sidebar pt-3 p-md-4">
                                 <div class="text-center">
                                     <?php
                                     if (has_post_thumbnail()) {
