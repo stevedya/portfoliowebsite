@@ -23,13 +23,26 @@ register_nav_menus( array(
     //Make sure to put theme name on right
 ));
 //Custom Logo
-add_theme_support('custom-logo');
+function steven_custom_logo_setup() {
+    add_theme_support('custom-logo', array(
+        'height' => 210,
+        'width' => 500,
+        'flex-height' => true,
+        'flex-width' => true
+    ));
+}
+add_action('after_setup_theme', 'steven_custom_logo_setup');
 //menus?
 add_theme_support('menus');
 //post thumbnails
 add_theme_support('post-thumbnails');
 //Custom Image Size
 add_image_size('portfolio-thumb', 200, 200, true);
+//Single Portfolio image size
+add_image_size('custom-full', 1200, 1200, false);
+//front logo
+add_image_size('front-logo', 500, 210, false);
+
 
 /* ==========================================================================
   Load Styles

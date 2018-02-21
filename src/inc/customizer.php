@@ -46,6 +46,18 @@ function custom_settings($wp_customize)
         'type' => 'text',
         'priority' => 3
     ));
+    //Intro Header
+    $wp_customize->add_setting('intro_header', array(
+        'default' => _x('I Am Steve', 'stevensteinwand'),
+        'type' => 'theme_mod',
+    ));
+    $wp_customize->add_control('intro_header', array(
+        'label' => __('Intro Heading', 'stevensteinwand'),
+        'section' => 'header_section',
+        'type' => 'text',
+        'priority' => 4
+    ));
+
     //Intro Text
     $wp_customize->add_setting('intro_text', array(
         'default' => _x('Human. Friend. Daughter. Spinach. Photographer. Musician. Comedian. Developer. Food eater. Model. Tea. Fashion. Dj. Writer. Actor. Soup. Driver. Steve', 'stevensteinwand'),
@@ -55,7 +67,7 @@ function custom_settings($wp_customize)
         'label' => __('Intro Text', 'stevensteinwand'),
         'section' => 'header_section',
         'type' => 'textarea',
-        'priority' => 4
+        'priority' => 5
     ));
 
     //Button Url
@@ -68,7 +80,7 @@ function custom_settings($wp_customize)
         'label' => __('Button Url', 'stevensteinwand'),
         'section' => 'header_section',
         'type' => 'text',
-        'priority' => 5
+        'priority' => 6
     ));
 
     //Button Text
@@ -81,7 +93,7 @@ function custom_settings($wp_customize)
         'label' => __('Button Text', 'stevensteinwand'),
         'section' => 'header_section',
         'type' => 'text',
-        'priority' => 6
+        'priority' => 7
     ));
 
 }

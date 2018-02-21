@@ -450,8 +450,12 @@ ul {
 .site-heading {
   color: #131313; }
 
+.company-logo {
+  width: 100%;
+  height: auto; }
+
 .jumbotron {
-  height: 100vh;
+  min-height: 600px;
   margin-bottom: 0;
   background: transparent; }
 
@@ -619,8 +623,7 @@ footer {
     display: block; }
   .about-sidebar {
     box-shadow: 3px 3px 10px 0px rgba(12, 12, 12, 0.55);
-    background: #eaeaea;
-    border: 5px dashed rgba(187, 187, 187, 0.341176); }
+    background: #eaeaea; }
   .portfolio-overlay {
     display: flex; }
   .mobile-portfolio-overlay {
@@ -631,7 +634,9 @@ footer {
     padding-bottom: 100px; }
   .grid-item {
     float: left;
-    width: 33.333333%; } }
+    width: 33.333333%; }
+  .company-logo {
+    max-width: 500px; } }
 
 @media screen and (max-width: 768px) {
   .isotope-buttons {

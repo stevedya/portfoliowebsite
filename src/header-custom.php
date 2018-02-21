@@ -17,10 +17,6 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<?php
-$custom_logo_id = get_theme_mods();
-$image = wp_get_attachment_image_src($custom_logo_id['custom_logo'], 'full');
-?>
 <header>
 <!--    <div class="ml-auto">-->
 <!--        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"-->
@@ -28,10 +24,21 @@ $image = wp_get_attachment_image_src($custom_logo_id['custom_logo'], 'full');
 <!--            <i class="fas fa-bars"></i></span>-->
 <!--        </button>-->
 <!--    </div>-->
+
+    <!-- Custom Logo -->
     <div class="container">
         <div class="row">
             <div class="col-12 text-center py-4">
-                <h1 class="site-heading"><?php bloginfo('title'); ?></h1>
+                <a href="<?php get_bloginfo('url'); ?>"><?php
+                    $custom_logo_id = get_theme_mods();
+                    $image = wp_get_attachment_image_src($custom_logo_id['custom_logo'], 'front-logo');
+
+                    if (has_custom_logo()) {
+                        echo '<img src="' . $image[0] . '" class="company-logo" alt="company logo">';
+                    } else {
+                        echo '<img src="' . get_template_directory_uri() . '/img/logo-1.png' . '" class="company-logo" alt="company logo">';
+                    }
+                    ?></a>
             </div>
         </div>
     </div>
