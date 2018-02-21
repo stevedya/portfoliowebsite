@@ -310,7 +310,10 @@ template {
 
 .btn-primary {
   background: #00acad;
-  border-color: #00acad; }
+  border-color: #00acad;
+  color: #f1f1f1 !important; }
+  .btn-primary a {
+    color: #f1f1f1; }
   .btn-primary:hover {
     background: #131313;
     border-color: #131313; }
@@ -329,7 +332,7 @@ template {
 .btn-dark {
   background: #131313;
   border-color: #131313;
-  color: #f1f1f1; }
+  color: #f1f1f1 !important; }
   .btn-dark:hover {
     background: #00acad;
     border-color: #00acad; }
@@ -344,6 +347,13 @@ template {
 
 .btn-dark.focus, .btn-dark:focus {
   box-shadow: none; }
+
+a {
+  color: #00acad; }
+  a:visited {
+    color: #00acad; }
+  a:hover {
+    color: #008484; }
 
 .hover-effect a:hover,
 .hover-effect a:focus {
@@ -607,6 +617,8 @@ footer {
   color: #eaeaea; }
 
 @media screen and (min-width: 768px) {
+  .company-logo {
+    max-width: 500px; }
   h1 {
     font-size: 3.998em; }
   h2 {
@@ -634,9 +646,7 @@ footer {
     padding-bottom: 100px; }
   .grid-item {
     float: left;
-    width: 33.333333%; }
-  .company-logo {
-    max-width: 500px; } }
+    width: 33.333333%; } }
 
 @media screen and (max-width: 768px) {
   .isotope-buttons {

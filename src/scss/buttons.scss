@@ -5,6 +5,10 @@
 .btn-primary {
   background: $main-color;
   border-color: $main-color;
+  color: $lightest-grey!important;
+  & a {
+    color: $lightest-grey;
+  }
   &:hover {
     background: $dark-grey;
     border-color: $dark-grey;
@@ -28,7 +32,7 @@
 .btn-dark {
   background: $dark-grey;
   border-color: $dark-grey;
-  color: $lightest-grey;
+  color: $lightest-grey!important;
   &:hover {
     background: $main-color;
     border-color: $main-color;

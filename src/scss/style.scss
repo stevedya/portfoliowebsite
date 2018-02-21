@@ -239,6 +239,9 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
+  .company-logo {
+    max-width: 500px;
+  }
   h1 {
     font-size: 3.998em;
   }
@@ -283,9 +286,6 @@ footer {
   .grid-item {
     float: left;
     width: 33.333333%;
-  }
-  .company-logo {
-    max-width: 500px;
   }
 }
 

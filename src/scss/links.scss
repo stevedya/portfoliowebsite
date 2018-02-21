@@ -1,4 +1,12 @@
-
+a {
+  color: $main-color;
+  &:visited {
+    color: $main-color;
+  }
+  &:hover {
+    color: $main-dark;
+  }
+}
 .hover-effect a:hover,
 .hover-effect a:focus {
   outline: none;

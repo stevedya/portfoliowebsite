@@ -48,7 +48,7 @@
                             <?php echo $client_label . " "; ?>
                         </span>
                         <span class="detail-name">
-                            <a href="<?php echo $client_name; ?>"><?php echo $client_name; ?></a>
+                            <a href="http://<?php echo $client_name; ?>"><?php echo $client_name; ?></a>
                         </span>
                     </span>
                     </p>
