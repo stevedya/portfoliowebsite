@@ -37,22 +37,19 @@
 <body <?php body_class(); ?>>
 <header class="header-bg">
     <!-- Custom Logo -->
+    <?php if (has_custom_logo()) : ?>
     <div class="container">
         <div class="row">
             <div class="col-12 text-center py-4">
                 <a href="<?php get_bloginfo('url'); ?>"><?php
                     $custom_logo_id = get_theme_mods();
                     $image = wp_get_attachment_image_src($custom_logo_id['custom_logo'], 'front-logo');
-
-                    if (has_custom_logo()) {
-                        echo '<img src="' . $image[0] . '" class="company-logo" alt="company logo">';
-                    } else {
-                        echo '<img src="' . get_template_directory_uri() . '/img/logo-1.png' . '" class="company-logo" alt="company logo">';
-                    }
-                    ?></a>
+                    echo '<img src="' . $image[0] . '" class="company-logo" alt="company logo">'; ?></a>
             </div>
         </div>
     </div>
+    <?php  endif;  ?>
+
     <nav class="navbar navbar-expand-md" role="navigation">
 <!--        <a class="navbar-brand" href="--><?php //echo home_url(); ?><!--">--><?php //bloginfo('name'); ?><!--</a>-->
 <!--        <div class="ml-auto">-->
@@ -86,7 +83,7 @@
                     <h1><?php echo get_theme_mod('intro_header', 'I Am Steve'); ?></h1>
                     <p class="description"><?php bloginfo('description') ?></p>
                     <p><?php echo get_theme_mod('intro_text', 'Human. Friend. Daughter. Spinach. Photographer. Musician. Comedian. Developer. Food eater. Model. Tea. Fashion. Dj. Writer. Actor. Soup. Driver. Steve') ?></p>
-                    <a class="btn btn-primary btn-lg" href="<?php echo get_theme_mod('intro_button_url', '#'); ?>"
+                    <a class="btn btn-dark btn-lg" href="<?php echo get_theme_mod('intro_button_url', '#'); ?>"
                        role="button"><?php echo get_theme_mod('intro_button_text', 'Learn More About Me'); ?></a>
                 </div>
             </div>

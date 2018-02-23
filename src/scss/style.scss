@@ -5,9 +5,9 @@
 @import "links";
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Poppins', sans-serif;
+  font-family:  'europa', 'Roboto', sans-serif;
   font-weight: 900;
-  color: $main-color;
+  color: $dark-grey;
 }
 
 h1 {
@@ -28,11 +28,13 @@ h3 {
 
 h4 {
   font-size: 1.25em;
+  color: $main-color;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'europa', 'Roboto', sans-serif;
   margin-bottom: 50px;
+  color: $medium-grey;
 }
 
 ul {
@@ -49,12 +51,15 @@ ul {
 .site-heading {
   color: $dark-grey;
 }
+header {
+  margin-top: 1.875em;
+}
 .company-logo {
   width: 100%;
   height: auto;
 }
 .jumbotron {
-  min-height: 600px;
+  min-height: 550px;
   margin-bottom: 0;
   background: rgba(0, 0, 0, 0);
 }
@@ -99,14 +104,14 @@ ul {
 }
 
 .description {
-  font-weight: 900;
+  color: $main-color;
   text-transform: uppercase;
   font-size: 0.875em;
 }
 
 .link-area {
   color: $lightest-grey;
-  background: $main-dark;
+  background: $main-color;
 }
 
 .about-content {
@@ -276,6 +281,9 @@ footer {
   }
   .mobile-portfolio-overlay {
     display: none;
+  }
+  .jumbotron {
+    min-height: 860px;
   }
 }
 

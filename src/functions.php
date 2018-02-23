@@ -49,8 +49,10 @@ add_image_size('front-logo', 500, 210, false);
    ========================================================================== */
 function load_theme_styles()
 {
+    //Typekit Fonts
+    wp_enqueue_style('typekit_fonts', 'https://use.typekit.net/kkp3tsc.css');
     //fonts
-    wp_enqueue_style('google_fonts', "https://fonts.googleapis.com/css?family=Poppins");
+    wp_enqueue_style('google_fonts', "https://fonts.googleapis.com/css?family=Roboto");
     // Font awesome
     wp_enqueue_style('font-awesome', 'https://use.fontawesome.com/releases/v5.0.6/js/all.js');
     //wp_enqueue_style('font-awesome', 'https://use.fontawesome.com/releases/v5.0.6/css/all.css');
@@ -65,6 +67,7 @@ add_action("wp_enqueue_scripts", "load_theme_styles");
 /* ==========================================================================
   Load Scripts
    ========================================================================== */
+
 function load_js_scripts()
 {
     wp_deregister_script('jQuery');
