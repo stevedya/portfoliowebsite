@@ -309,8 +309,8 @@ template {
   border-radius: 60px; }
 
 .btn-primary {
-  background: #07b57a;
-  border-color: #07b57a;
+  background: #07acb5;
+  border-color: #07acb5;
   color: #f1f1f1 !important; }
   .btn-primary a {
     color: #f1f1f1; }
@@ -334,8 +334,8 @@ template {
   border-color: #131313;
   color: #f1f1f1 !important; }
   .btn-dark:hover {
-    background: #07b57a;
-    border-color: #07b57a; }
+    background: #07acb5;
+    border-color: #07acb5; }
 
 .btn-dark:not(:disabled):not(.disabled).active, .btn-dark:not(:disabled):not(.disabled):active, .show > .btn-dark.dropdown-toggle {
   background: #131313;
@@ -349,11 +349,11 @@ template {
   box-shadow: none; }
 
 a {
-  color: #07b57a; }
+  color: #07acb5; }
   a:visited {
-    color: #07b57a; }
+    color: #07acb5; }
   a:hover {
-    color: #008484; }
+    color: #006584; }
 
 .hover-effect a:hover,
 .hover-effect a:focus {
@@ -372,7 +372,7 @@ a {
   left: 0;
   width: 100%;
   height: 2px;
-  background: #07b57a;
+  background: #07acb5;
   content: '';
   opacity: 0;
   -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
@@ -396,7 +396,7 @@ a {
 
 .hover-effect a:hover,
 .hover-effect a:focus {
-  color: #07b57a; }
+  color: #07acb5; }
 
 .hover-effect a:hover::before,
 .hover-effect a:focus::before,
@@ -442,7 +442,7 @@ h3 {
 
 h4 {
   font-size: 1.25em;
-  color: #07b57a; }
+  color: #07acb5; }
 
 body {
   font-family: 'europa', 'Roboto', sans-serif;
@@ -480,9 +480,9 @@ header {
   text-transform: uppercase; }
 
 .navbar a {
-  color: #07b57a; }
+  color: #07acb5; }
   .navbar a:visited {
-    color: #07b57a; }
+    color: #07acb5; }
   .navbar a:hover {
     color: #131313; }
 
@@ -507,13 +507,13 @@ header {
   margin-right: 20px; }
 
 .description {
-  color: #07b57a;
+  color: #07acb5;
   text-transform: uppercase;
   font-size: 0.875em; }
 
 .link-area {
   color: #f1f1f1;
-  background: #07b57a; }
+  background: #07acb5; }
 
 .about-content {
   font-size: 1.125em; }
@@ -587,7 +587,7 @@ header {
   text-align: center;
   padding: 5px 10px;
   border-radius: 50px;
-  color: #00ddde;
+  color: #07acb5;
   font-weight: bold;
   display: inline; }
 

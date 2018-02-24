@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-12 text-center">
                 <h3 class="my-3">NOPE! That page doesn't exist</h3>
-                <img src="<?php echo get_template_directory_uri() . '/img/404.jpg' ?>" alt="nope page not found" class="my-2">
+                <img src="<?php echo get_template_directory_uri() . '/img/404.jpg' ?>" alt="nope page not found" class="my-2 img-fluid">
                 <p>Please use the navigation to continue to the real site.</p>
             </div>
         </div>
