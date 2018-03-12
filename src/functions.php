@@ -50,7 +50,7 @@ add_image_size('front-logo', 500, 210, false);
 function load_theme_styles()
 {
     //Typekit Fonts
-    wp_enqueue_style('typekit_fonts', 'https://use.typekit.net/kkp3tsc.css');
+    //wp_enqueue_style('typekit_fonts', 'https://use.typekit.net/kkp3tsc.css');
     //fonts
     wp_enqueue_style('google_fonts', "https://fonts.googleapis.com/css?family=Roboto");
     // Font awesome

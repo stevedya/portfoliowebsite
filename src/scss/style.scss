@@ -4,9 +4,19 @@
 @import "buttons";
 @import "links";
 
+@font-face {
+  font-family: sf-medium;
+  src: url(fonts/SF-Pro-Text-Medium.otf);
+}
+
+@font-face {
+  font-family: sf-regular;
+  src: url(fonts/SF-Pro-Text-Regular.otf);
+}
+
 h1, h2, h3, h4, h5, h6 {
-  font-family:  'europa', 'Roboto', sans-serif;
-  font-weight: 900;
+  font-family:  'sf-medium','Roboto', sans-serif;
+  font-weight: 700;
   color: $dark-grey;
 }
 
@@ -32,7 +42,7 @@ h4 {
 }
 
 body {
-  font-family: 'europa', 'Roboto', sans-serif;
+  font-family: 'sf-regular', 'Roboto', sans-serif;
   margin-bottom: 50px;
   color: $medium-grey;
 }
